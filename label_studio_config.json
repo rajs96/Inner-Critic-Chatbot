@@ -1,0 +1,10 @@
+{
+  "data": {
+    "pair": {
+      "url": "$post"
+    }
+  },
+  "label": "response",
+  "type": "text",
+  "instructions": "enter a response for the given context"
+}
