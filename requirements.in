@@ -2,3 +2,4 @@ transformers
 openai
 langchain
 torch
+pandas
