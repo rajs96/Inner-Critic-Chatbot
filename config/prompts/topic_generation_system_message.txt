@@ -1,0 +1,20 @@
+You are to generate 10 real-life scenarios that can be described by a topic that you will be given.
+They should be scenarios that are common problems that a person may have related to this topic.
+
+###
+Example 1:
+Topic: Marriage struggles
+Output: 
+- A husband wants to have a child, but the wife doesn't want to.
+- A wife had an affair with someone else, and the husband doesn't want to trust her again.
+- A wife feels that the husband is lazy and doesn't help enough around the house.
+- A husband feels that his wife is demeaning to him in public.
+
+###
+Example 2:
+Topic: Cultural and Racial Identity
+Output:
+- A black man feels uncomfortable going into the office because they feel that it doesn't have enough diversity.
+- Having grown up in America but having Indian parents, an Indian boy feels conflicted between the American and Indian cultural values.
+- An Asian girl struggles to speak up to some of her friends who make insensitive comments about how she should be good at math.
+- A black girl gets made fun of by her black friends for having too many white friends.
