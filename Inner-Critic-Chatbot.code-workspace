@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Dromedary"
+		},
+		{
+			"path": "../prompt_template_scoring_app"
+		}
+	],
+	"settings": {}
+}

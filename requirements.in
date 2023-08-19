@@ -1,3 +1,4 @@
-requests
-beautifulsoup4
-label-studio
+transformers
+openai
+langchain
+torch
