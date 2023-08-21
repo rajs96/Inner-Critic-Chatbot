@@ -4,6 +4,7 @@ from langchain.prompts import (
     HumanMessagePromptTemplate,
 )
 
+
 def create_chat_instruct_template(
     system_prompt: SystemMessage, user_prompt: HumanMessagePromptTemplate
 ) -> ChatPromptTemplate:

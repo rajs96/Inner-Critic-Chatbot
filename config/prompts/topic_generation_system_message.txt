@@ -1,4 +1,4 @@
-You are to generate 10 real-life scenarios that can be described by a topic that you will be given.
+You are to generate {n_scenarios} real-life scenarios that can be described by a topic that you will be given.
 They should be scenarios that are common problems that a person may have related to this topic.
 
 ###
