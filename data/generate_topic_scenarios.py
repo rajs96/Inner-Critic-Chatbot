@@ -32,6 +32,7 @@ def generate_all_scenarios(
             # Give buffer due to GPT4 rate limits
             time.sleep(3)
 
+    # Answer is in the form of bullet points, need to extract
     scenarios = [
         line.strip()[2:]
         for scenarios_string in scenario_strings
