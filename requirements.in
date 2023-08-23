@@ -3,3 +3,5 @@ openai
 langchain
 torch
 pandas
+flake8
+mypy

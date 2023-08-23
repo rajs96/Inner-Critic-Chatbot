@@ -1,0 +1,4 @@
+Scenario: {scenario}
+Theme: {theme}
+Emotion: {emotion}
+Level of detail: {detail_level}

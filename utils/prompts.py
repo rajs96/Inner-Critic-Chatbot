@@ -1,12 +1,32 @@
-from langchain.schema import SystemMessage
+"""Prompt utilities"""
+from typing import List
 from langchain.prompts import (
+    PromptTemplate,
     ChatPromptTemplate,
     HumanMessagePromptTemplate,
+    SystemMessagePromptTemplate,
 )
 
 
-def create_chat_instruct_template(
-    system_prompt: SystemMessage, user_prompt: HumanMessagePromptTemplate
+def create_chat_template(
+    system_message_string: str,
+    system_message_input_variables: List[str],
+    input_message_string: str,
+    input_message_input_variables: List[str],
 ) -> ChatPromptTemplate:
-    """Chat template used primarily for instructing an LLM to generate data"""
-    return ChatPromptTemplate(messages=[system_prompt, user_prompt])
+    """Utility function to create chat template"""
+    system_message_template = SystemMessagePromptTemplate(
+        prompt=PromptTemplate(
+            template=system_message_string,
+            input_variables=system_message_input_variables,
+        ),
+    )
+    input_message_template = HumanMessagePromptTemplate(
+        prompt=PromptTemplate(
+            template=input_message_string,
+            input_variables=input_message_input_variables
+        ),
+    )
+    return ChatPromptTemplate(
+        messages=[system_message_template, input_message_template]
+    )
