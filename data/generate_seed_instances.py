@@ -57,7 +57,8 @@ async def generate_all_input_instances(
         tasks = []
         print(f"Started generating instances {i} to {i+request_batch_size}")
         for j in tqdm_asyncio(
-            range(i, min(i + request_batch_size, num_instances)), desc="Generating instances for batch"
+            range(i, min(i + request_batch_size, num_instances)),
+            desc="Generating instances for batch",
         ):
             tasks.append(generate_input_instance(**input_instance_attributes[j]))
             await asyncio.sleep(0.5)
