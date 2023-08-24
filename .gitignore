@@ -1,2 +1,3 @@
 Inner-Critic-Chatbot.code-workspace
 **/__pycache__/
+.mypy_cache/**

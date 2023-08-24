@@ -49,7 +49,7 @@ async def generate_all_input_instances(
         for _ in range(num_instances_per_scenario)
     ]
     num_instances = len(input_instance_attributes)
-    request_batch_size = 10
+    request_batch_size = 75
     for i in tqdm_asyncio(
         range(0, num_instances, request_batch_size),
         desc="Making OpenAI requests in batches...",
@@ -57,10 +57,10 @@ async def generate_all_input_instances(
         tasks = []
         print(f"Started generating instances {i} to {i+request_batch_size}")
         for j in tqdm_asyncio(
-            range(i, i + request_batch_size), desc="Generating instances for batch"
+            range(i, min(i + request_batch_size, num_instances)), desc="Generating instances for batch"
         ):
             tasks.append(generate_input_instance(**input_instance_attributes[j]))
-            await asyncio.sleep(4)
+            await asyncio.sleep(0.5)
 
         batch_records = await asyncio.gather(*tasks)
         batch_records = [
@@ -69,7 +69,7 @@ async def generate_all_input_instances(
         ]
         print(f"Completed generating instances {i} to {i+request_batch_size}")
         records.extend(batch_records)
-        await asyncio.sleep(10)
+        await asyncio.sleep(5)
 
     return records
 
@@ -85,15 +85,15 @@ if __name__ == "__main__":
         abspath(SEED_INSTANCE_GENERATION_CONFIG["input_emotions_path"])
     )
     num_sentences_range = [
-        SEED_INSTANCE_GENERATION_CONFIG["num_sentences_min"],
-        SEED_INSTANCE_GENERATION_CONFIG["num_sentences_max"],
+        int(SEED_INSTANCE_GENERATION_CONFIG["num_sentences_min"]),
+        int(SEED_INSTANCE_GENERATION_CONFIG["num_sentences_max"]),
     ]
     sentence_diversity_levels = read_text_file_lines(
         abspath(SEED_INSTANCE_GENERATION_CONFIG["input_diversity_levels_path"])
     )
-    num_instances_per_scenario = SEED_INSTANCE_GENERATION_CONFIG[
-        "num_instances_per_scenario"
-    ]
+    num_instances_per_scenario = int(
+        SEED_INSTANCE_GENERATION_CONFIG["num_instances_per_scenario"]
+    )
 
     instances = asyncio.run(
         generate_all_input_instances(
@@ -105,4 +105,7 @@ if __name__ == "__main__":
             num_instances_per_scenario=num_instances_per_scenario,
         )
     )
-    write_json(instances, abspath(SEED_INSTANCE_GENERATION_CONFIG["seed_instances_output_path"]))
+    write_json(
+        instances,
+        abspath(SEED_INSTANCE_GENERATION_CONFIG["seed_instances_output_path"]),
+    )
