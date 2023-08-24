@@ -23,8 +23,7 @@ def create_chat_template(
     )
     input_message_template = HumanMessagePromptTemplate(
         prompt=PromptTemplate(
-            template=input_message_string,
-            input_variables=input_message_input_variables
+            template=input_message_string, input_variables=input_message_input_variables
         ),
     )
     return ChatPromptTemplate(

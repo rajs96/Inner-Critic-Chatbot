@@ -9,7 +9,7 @@ from config.chains import SCENARIO_GENERATION_CHAIN
 from utils.misc import read_text_file_lines
 
 
-def extract_scenarios_by_topic(topic: str, n_scenarios: int) -> str:
+def generate_scenarios_by_topic(topic: str, n_scenarios: int) -> str:
     """For a particular topic, generate scenarios using prompt and GPT4"""
     return SCENARIO_GENERATION_CHAIN.run(topic=topic, n_scenarios=n_scenarios)
 
@@ -25,7 +25,7 @@ def generate_all_scenarios(
             range(0, n_scenarios_per_topic, batch_size),
             desc="Processing scenario batches",
         ):
-            scenario_string = extract_scenarios_by_topic(
+            scenario_string = generate_scenarios_by_topic(
                 topic=topic, n_scenarios=batch_size
             )
             scenario_strings.append(scenario_string)

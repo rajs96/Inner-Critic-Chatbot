@@ -1,4 +1,5 @@
 Scenario: {scenario}
 Theme: {theme}
 Emotion: {emotion}
-Level of detail: {detail_level}
+Number of Sentences: {num_sentences}
+Sentence Diversity: {sentence_diversity_level}

@@ -1,13 +1,6 @@
 """Miscellaneous utilities"""
-from typing import List
-import asyncio
-from functools import partial
-
-
-async def async_run(func, **kwargs):
-    loop = asyncio.get_running_loop()
-    func_partial = partial(func, **kwargs)
-    return await loop.run_in_executor(None, func_partial)
+from typing import List, Any
+import json
 
 
 def read_text_file(file_path: str) -> str:
@@ -20,9 +13,14 @@ def read_text_file(file_path: str) -> str:
 def read_text_file_lines(file_path: str) -> List[str]:
     "Helper to read a text file line by line into a list"
     res = []
-    with open(file_path, "r") as f:
-        lines = f.readlines()
+    with open(file_path, "r", encoding="utf-8") as file:
+        lines = file.readlines()
         for line in lines:
             res.append(line.strip())
 
     return res
+
+
+def write_json(obj: Any, path: str):
+    with open(path, "w", encoding="utf=8") as json_file:
+        json.dump(obj, json_file, indent=4)

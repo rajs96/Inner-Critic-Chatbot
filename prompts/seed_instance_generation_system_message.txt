@@ -5,13 +5,22 @@ information:
 - Scenario: The real-life situation that the user is struggling with.
 - Theme: The underlying problem the user is struggling with (i.e. fear of failure)
 - Emotion: The emotional tone that the user is writing with. (i.e. confused)
-- Level of detail: How detailed and forthcoming the user is about their situation (i.e. very detailed and explicit)
+- Number of sentences: The number of sentences to include in the input
+- Sentence Diversity: The degree to which sentences should vary in terms of their length, structure, and grammatical constructs (i.e. Medium-level diversity)
 
 Generate a prompt that the user of the chatbot might give to the chatbot, given these pieces of information.
 
 ## Guidelines
-The attributes from above should implicit in the user's input to the chatbot.
+
+Guideline 1: Nuanced and implicit expression of emotions and themes.
+- The attributes from above should be implicit in the user's input to the chatbot.
 For example, if the emotion is "angry", a good sentence might involve mentioning actions and feeling associated with anger, like "I just can't stop yelling at people", rather than "I am angry"
 If the theme is "fear of failure", a good sentence might involve implicit uncertainty and pain associated with not succeeding, like: "Whenever I think of me flubbing on stage my heart starts pounding and my palms start sweating", rather than "I have a fear of failure"
 
-Only generate the input to the chatbot, rather than the response.
+Guideline 2: Diversity in sentences.
+- Based on the diversity level provided, the input message could diversify based on 
+a.) The variance of the number of words in each sentence (i.e. first sentence will have 2 words, and the second will have 13)
+b.) The sentence structure (i.e. one sentence is declarative, one sentence is imperative, one sentence is exclamatory, etc.)
+c.) The grammatical construct (i.e. one sentence uses the active voice, one sentence uses a simile, one sentence uses conjunctions, etc.)
+
+Guideline 3: Only generate the input to the chatbot, rather than the response.
