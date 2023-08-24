@@ -11,4 +11,6 @@ def create_chat_model(config: configparser.SectionProxy) -> ChatOpenAI:
         temperature=float(config["generation_temperature"]),
         top_p=float(config["generation_top_p"]),
         max_tokens=int(config["generation_max_tokens"]),
+        streaming=True,
+        request_timeout=120
     )

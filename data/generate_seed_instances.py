@@ -49,7 +49,7 @@ async def generate_all_input_instances(
         for _ in range(num_instances_per_scenario)
     ]
     num_instances = len(input_instance_attributes)
-    request_batch_size = 75
+    request_batch_size = 60
     for i in tqdm_asyncio(
         range(0, num_instances, request_batch_size),
         desc="Making OpenAI requests in batches...",
