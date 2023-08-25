@@ -1,6 +1,7 @@
+pandas
+jupyter
+label-studio
 transformers
 openai
 langchain
 torch
-pandas
-jupyter
