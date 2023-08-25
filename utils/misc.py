@@ -22,5 +22,11 @@ def read_text_file_lines(file_path: str) -> List[str]:
 
 
 def write_json(obj: Any, path: str):
-    with open(path, "w", encoding="utf=8") as json_file:
+    with open(path, "w", encoding="utf-8") as json_file:
         json.dump(obj, json_file, indent=4)
+
+def read_json(path: str) -> Any:
+    with open(path, "r", encoding="utf-8") as json_file:
+        obj = json.load(json_file)
+    
+    return obj

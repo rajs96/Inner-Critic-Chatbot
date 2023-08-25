@@ -8,5 +8,6 @@ format:
 	black .
 
 clean:
-	find . -type d -name "__pycache__" -exec rm -r {} +
+	find . -type d \( -name "__pycache__" -o -name ".mypy_cache" -o -name ".ipynb_checkpoints" \) -exec rm -rf {} +
+
 

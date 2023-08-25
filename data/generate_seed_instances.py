@@ -77,21 +77,17 @@ async def generate_all_input_instances(
 
 if __name__ == "__main__":
     scenarios = read_text_file_lines(
-        abspath(SEED_INSTANCE_GENERATION_CONFIG["input_scenarios_path"])
-    )
+        SEED_INSTANCE_GENERATION_CONFIG["input_scenarios_path"])
     themes = read_text_file_lines(
-        abspath(SEED_INSTANCE_GENERATION_CONFIG["input_themes_path"])
-    )
+        SEED_INSTANCE_GENERATION_CONFIG["input_themes_path"])
     emotions = read_text_file_lines(
-        abspath(SEED_INSTANCE_GENERATION_CONFIG["input_emotions_path"])
-    )
+        SEED_INSTANCE_GENERATION_CONFIG["input_emotions_path"])
     num_sentences_range = [
         int(SEED_INSTANCE_GENERATION_CONFIG["num_sentences_min"]),
         int(SEED_INSTANCE_GENERATION_CONFIG["num_sentences_max"]),
     ]
     sentence_diversity_levels = read_text_file_lines(
-        abspath(SEED_INSTANCE_GENERATION_CONFIG["input_diversity_levels_path"])
-    )
+        SEED_INSTANCE_GENERATION_CONFIG["input_diversity_levels_path"])
     num_instances_per_scenario = int(
         SEED_INSTANCE_GENERATION_CONFIG["num_instances_per_scenario"]
     )

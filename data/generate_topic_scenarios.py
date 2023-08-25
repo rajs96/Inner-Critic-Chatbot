@@ -1,6 +1,5 @@
 """For synthetic training data, use an LLM to generate scenarios for a given topic"""
 import time
-from os.path import abspath
 from typing import List
 from tqdm import tqdm
 
@@ -44,9 +43,7 @@ def generate_all_scenarios(
 
 if __name__ == "__main__":
     # Get topics, number of scenarios, and batch size from the predefined config
-    all_topics = read_text_file_lines(
-        abspath(SCENARIO_GENERATION_CONFIG["input_topics_path"])
-    )
+    all_topics = read_text_file_lines(SCENARIO_GENERATION_CONFIG["input_topics_path"])
     n_scenarios_per_topic = int(SCENARIO_GENERATION_CONFIG["n_scenarios_per_topic"])
     batch_size = int(SCENARIO_GENERATION_CONFIG["generation_batch_size"])
 
@@ -54,6 +51,6 @@ if __name__ == "__main__":
     all_scenarios = generate_all_scenarios(
         all_topics, n_scenarios_per_topic, batch_size
     )
-    output_path = abspath(SCENARIO_GENERATION_CONFIG["generated_scenarios_path"])
+    output_path = SCENARIO_GENERATION_CONFIG["generated_scenarios_path"]
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(all_scenarios))
