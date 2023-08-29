@@ -20,12 +20,15 @@ def load_all_reddit_data(reddit_data_path: str) -> pd.DataFrame:
     """Assuming you have reddit csvs, loads them all into a pandas dataframe"""
     paths = [
         join(reddit_data_path, file)
-        for file in os.listdir(reddit_data_path)
+        for file in tqdm(os.listdir(reddit_data_path))
         if "post" in file
     ]
-    full_reddit_df = pd.concat([pd.read_csv(filepath) for filepath in paths])[
-        ["subreddit", "author", "date", "post"]
-    ].reset_index()
+    full_reddit_df = pd.DataFrame()
+    for path in tqdm(paths):
+        reddit_df = pd.read_csv(path)[["subreddit", "author", "date", "post"]]
+        full_reddit_df = pd.concat([full_reddit_df, reddit_df])
+    
+    full_reddit_df.reset_index(inplace=True)
     return full_reddit_df
 
 
@@ -49,7 +52,7 @@ def filter_max_length(full_reddit_df: pd.DataFrame, max_length: int) -> pd.DataF
     return filtered_reddit_df
 
 
-def load_emotion_tokenizer_func(model_name) -> Callable[[List[str]], Tensor]:
+def load_emotion_tokenizer_func(model_name: str) -> Callable[[List[str]], Tensor]:
     """Load pretrained huggingface tokenizer"""
     emotion_tokenizer = AutoTokenizer.from_pretrained(model_name)
     emotion_tokenizer_func = partial(
@@ -116,7 +119,9 @@ def predict_and_merge_reddit_posts(
 
 
 if __name__ == "__main__":
+    print("Loading reddit data...")
     full_reddit_df = load_all_reddit_data(CONFIG["reddit_data_folder_path"])
+    print("Filtering by length and subreddit...")
     filtered_reddit_df_by_length = filter_max_length(
         full_reddit_df, int(CONFIG["max_post_length"])
     )
@@ -126,6 +131,7 @@ if __name__ == "__main__":
     filtered_reddit_df = filter_subreddits(
         filtered_reddit_df_by_length, relevant_subreddits
     )
+    print("Loading emotion tokenizer and classifier...")
     emotion_tokenizer_func = load_emotion_tokenizer_func(
         CONFIG["huggingface_emotion_model"]
     )
@@ -134,6 +140,7 @@ if __name__ == "__main__":
         CONFIG["huggingface_emotion_model"], device
     )
     labels = list(emotion_classifier.config.id2label.values())
+    print("Making emotion predictions...")
     df = predict_and_merge_reddit_posts(
         model=emotion_classifier,
         tokenizer_func=emotion_tokenizer_func,
@@ -142,4 +149,5 @@ if __name__ == "__main__":
         device=device,
         batch_size=32,
     )
+    print("Saving filtered reddit data...")
     df.to_csv(CONFIG["reddit_data_filtered_path"])

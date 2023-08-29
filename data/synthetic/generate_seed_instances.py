@@ -79,10 +79,10 @@ if __name__ == "__main__":
     scenarios = read_text_file_lines(CONFIG["input_scenarios_path"])
     themes = read_text_file_lines(CONFIG["input_themes_path"])
     emotions = read_text_file_lines(CONFIG["input_emotions_path"])
-    num_sentences_range = [
+    num_sentences_range = (
         int(CONFIG["num_sentences_min"]),
         int(CONFIG["num_sentences_max"]),
-    ]
+    )
     sentence_diversity_levels = read_text_file_lines(
         CONFIG["input_diversity_levels_path"]
     )
