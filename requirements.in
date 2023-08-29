@@ -1,6 +1,6 @@
+torch
 pandas
 jupyter
 transformers
 openai
 langchain
-torch

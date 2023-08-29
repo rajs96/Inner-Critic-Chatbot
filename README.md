@@ -9,3 +9,17 @@ With the recent advances in AI and large language models, different solutions ha
 - AI-based mental health platforms: Companies like [Woebot Health](https://woebothealth.com/) and [Elomia Health](https://elomia.com/) offer chat-based solutions for mental health support. Woebot operates more from the clinical side and provides validated, therapy-based techniques. Elomia is for enterprises and also takes into account depression and anxiety, but satisfaction is more based on customer feedback.
 
 While the above tools likely work well for self-confidence struggles, there is no chatbot that is specifically fine-tuned for this use case. This application provides a chat-based solution that well attuned to these use cases.
+
+# Environment Setup
+Using scripts within this repository requires setting up a virtual env and installing dependencies. I use `conda`, `pip-tools`, and `pip` to manage dependencies, but you can use whatever tools you prefer.
+```
+conda activate --name myenv python=3.10
+pip install pip-tools
+pip-compile requirements.in
+pip install -r requirements.txt
+```
+
+You also need an OpenAI API key to run some of the data generation scripts:
+```
+export OPENAI_API_KEY="your key here"
+```
