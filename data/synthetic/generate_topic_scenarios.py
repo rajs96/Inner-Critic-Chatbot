@@ -3,7 +3,7 @@ import time
 from typing import List
 from tqdm import tqdm
 
-from config import SCENARIO_GENERATION_CONFIG
+from config import SCENARIO_GENERATION_CONFIG as CONFIG
 from config.chains import SCENARIO_GENERATION_CHAIN
 from utils.misc import read_text_file_lines
 
@@ -43,14 +43,14 @@ def generate_all_scenarios(
 
 if __name__ == "__main__":
     # Get topics, number of scenarios, and batch size from the predefined config
-    all_topics = read_text_file_lines(SCENARIO_GENERATION_CONFIG["input_topics_path"])
-    n_scenarios_per_topic = int(SCENARIO_GENERATION_CONFIG["n_scenarios_per_topic"])
-    batch_size = int(SCENARIO_GENERATION_CONFIG["generation_batch_size"])
+    all_topics = read_text_file_lines(CONFIG["input_topics_path"])
+    n_scenarios_per_topic = int(CONFIG["n_scenarios_per_topic"])
+    batch_size = int(CONFIG["generation_batch_size"])
 
     # Generate scenarios and write to text file
     all_scenarios = generate_all_scenarios(
         all_topics, n_scenarios_per_topic, batch_size
     )
-    output_path = SCENARIO_GENERATION_CONFIG["generated_scenarios_path"]
+    output_path = CONFIG["generated_scenarios_path"]
     with open(output_path, "w", encoding="utf-8") as f:
         f.write("\n".join(all_scenarios))

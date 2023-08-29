@@ -4,7 +4,7 @@ import asyncio
 from tqdm.asyncio import tqdm_asyncio
 from os.path import abspath
 from typing import List, Dict, Tuple
-from config import SEED_INSTANCE_GENERATION_CONFIG
+from config import SEED_INSTANCE_GENERATION_CONFIG as CONFIG
 from config.chains import SEED_INSTANCE_GENERATION_CHAIN
 from utils.misc import read_text_file_lines, write_json
 
@@ -76,23 +76,17 @@ async def generate_all_input_instances(
 
 
 if __name__ == "__main__":
-    scenarios = read_text_file_lines(
-        SEED_INSTANCE_GENERATION_CONFIG["input_scenarios_path"]
-    )
-    themes = read_text_file_lines(SEED_INSTANCE_GENERATION_CONFIG["input_themes_path"])
-    emotions = read_text_file_lines(
-        SEED_INSTANCE_GENERATION_CONFIG["input_emotions_path"]
-    )
+    scenarios = read_text_file_lines(CONFIG["input_scenarios_path"])
+    themes = read_text_file_lines(CONFIG["input_themes_path"])
+    emotions = read_text_file_lines(CONFIG["input_emotions_path"])
     num_sentences_range = [
-        int(SEED_INSTANCE_GENERATION_CONFIG["num_sentences_min"]),
-        int(SEED_INSTANCE_GENERATION_CONFIG["num_sentences_max"]),
+        int(CONFIG["num_sentences_min"]),
+        int(CONFIG["num_sentences_max"]),
     ]
     sentence_diversity_levels = read_text_file_lines(
-        SEED_INSTANCE_GENERATION_CONFIG["input_diversity_levels_path"]
+        CONFIG["input_diversity_levels_path"]
     )
-    num_instances_per_scenario = int(
-        SEED_INSTANCE_GENERATION_CONFIG["num_instances_per_scenario"]
-    )
+    num_instances_per_scenario = int(CONFIG["num_instances_per_scenario"])
 
     instances = asyncio.run(
         generate_all_input_instances(
@@ -106,5 +100,5 @@ if __name__ == "__main__":
     )
     write_json(
         instances,
-        abspath(SEED_INSTANCE_GENERATION_CONFIG["seed_instances_output_path"]),
+        abspath(CONFIG["seed_instances_output_path"]),
     )
