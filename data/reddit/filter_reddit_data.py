@@ -2,8 +2,8 @@
 from typing import List, Callable
 import os
 from os.path import join
-from tqdm import tqdm
 from functools import partial
+from tqdm import tqdm
 import numpy as np
 import pandas as pd
 import torch
@@ -118,7 +118,7 @@ def predict_and_merge_reddit_posts(
 if __name__ == "__main__":
     full_reddit_df = load_all_reddit_data(CONFIG["reddit_data_folder_path"])
     filtered_reddit_df_by_length = filter_max_length(
-        full_reddit_df, CONFIG["max_post_length"]
+        full_reddit_df, int(CONFIG["max_post_length"])
     )
     relevant_subreddits = [
         subreddit.strip() for subreddit in CONFIG["relevant_subreddits"].split(",")

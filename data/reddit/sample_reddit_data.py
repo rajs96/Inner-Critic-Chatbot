@@ -41,9 +41,9 @@ if __name__ == "__main__":
     sampling_func = partial(
         stratified_weighted_sampling,
         all_data=filtered_reddit_df,
-        total_samples=CONFIG["n_samples_phase1"],
+        total_samples=int(CONFIG["n_samples_phase1"]),
         weight_col="negative_emotion_weight",
-        random_state=CONFIG["random_seed"],
+        random_state=int(CONFIG["random_seed"]),
     )
     sampled_reddit_df_phase1 = (
         filtered_reddit_df.groupby("subreddit")
@@ -61,8 +61,8 @@ if __name__ == "__main__":
         1.0 / sampled_reddit_df_phase1["dominant_negative_emotion"].value_counts()
     )
     sampled_reddit_df_final = filtered_reddit_df.sample(
-        n=CONFIG["n_samples_final"],
+        n=int(CONFIG["n_samples_final"]),
         weights=sampled_reddit_df_phase1["dominant_negative_emotion"],
-        random_state=CONFIG["random_seed"],
+        random_state=int(CONFIG["random_seed"]),
     )
     sampled_reddit_df_final.to_csv(CONFIG["reddit_data_sampled_path"])
