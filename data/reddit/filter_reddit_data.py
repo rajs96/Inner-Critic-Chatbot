@@ -27,7 +27,7 @@ def load_all_reddit_data(reddit_data_path: str) -> pd.DataFrame:
     for path in tqdm(paths):
         reddit_df = pd.read_csv(path)[["subreddit", "author", "date", "post"]]
         full_reddit_df = pd.concat([full_reddit_df, reddit_df])
-    
+
     full_reddit_df.reset_index(inplace=True)
     return full_reddit_df
 
