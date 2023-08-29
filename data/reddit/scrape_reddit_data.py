@@ -5,7 +5,7 @@ import urllib.request
 import requests
 from bs4 import BeautifulSoup
 
-from config import REDDIT_INSTANCE_GENERATION_CONFIG
+from config import REDDIT_INSTANCE_GENERATION_CONFIG as CONFIG
 
 
 def get_csv_links(csv_url: str, base_url: str) -> List[str]:
@@ -25,10 +25,10 @@ def download_csv_links(csv_links: List[str], output_dir: str):
 
 if __name__ == "__main__":
     csv_links = get_csv_links(
-        csv_url=REDDIT_INSTANCE_GENERATION_CONFIG["reddit_data_csv_url"],
-        base_url=REDDIT_INSTANCE_GENERATION_CONFIG["reddit_data_base_url"],
+        csv_url=CONFIG["reddit_data_csv_url"],
+        base_url=CONFIG["reddit_data_base_url"],
     )
     download_csv_links(
         csv_links=csv_links,
-        output_dir=REDDIT_INSTANCE_GENERATION_CONFIG["reddit_data_folder_path"],
+        output_dir=CONFIG["reddit_data_folder_path"],
     )

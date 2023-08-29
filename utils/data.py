@@ -1,7 +1,7 @@
 from typing import List, Tuple, Callable
 import torch
 from torch import Tensor
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import Dataset
 
 
 class TextDataset(Dataset):
