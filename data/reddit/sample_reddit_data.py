@@ -32,6 +32,8 @@ if __name__ == "__main__":
     filtered_reddit_df = pd.read_csv(CONFIG["reddit_data_filtered_path"])
 
     # Phase 1 sampling
+
+    # Create a normalized "negative emotion" score
     negative_emotions = [
         emotion.strip() for emotion in CONFIG["negative_emotions"].split(",")
     ]
@@ -45,6 +47,7 @@ if __name__ == "__main__":
         weight_col="negative_emotion_weight",
         random_state=int(CONFIG["random_seed"]),
     )
+    # Stratified random sampling on subreddit, apply negative emotion weighting
     sampled_reddit_df_phase1 = (
         filtered_reddit_df.groupby("subreddit")
         .apply(lambda x: sampling_func(group=x))
@@ -52,6 +55,8 @@ if __name__ == "__main__":
     )
 
     # Phase 2 sampling
+
+    # Identify the "dominant" negative emotion, encompass disgust into anger.
     sampled_reddit_df_phase1["dominant_negative_emotion"] = (
         sampled_reddit_df_phase1[["anger", "disgust", "fear", "sadness"]]
         .idxmax(axis=1)
@@ -60,6 +65,7 @@ if __name__ == "__main__":
     inverse_freq_weight = (
         1.0 / sampled_reddit_df_phase1["dominant_negative_emotion"].value_counts()
     )
+    # Do weighted sampling to even out each dominant negative emotion
     sampled_reddit_df_final = filtered_reddit_df.sample(
         n=int(CONFIG["n_samples_final"]),
         weights=sampled_reddit_df_phase1["dominant_negative_emotion"],
