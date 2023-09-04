@@ -3,3 +3,6 @@ Inner-Critic-Chatbot.code-workspace
 .mypy_cache/
 /notebooks/.ipynb_checkpoints/
 **/assets/
+.DS_Store
+**/.DS_Store
+data/training_data/

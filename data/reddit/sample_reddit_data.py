@@ -27,29 +27,33 @@ def stratified_weighted_sampling(
     sample_size = int(total_samples * group_proportion)
     return group.sample(n=sample_size, weights=weight_col, random_state=random_state)
 
-
-if __name__ == "__main__":
-    filtered_reddit_df = pd.read_csv(CONFIG["reddit_data_filtered_path"])
-
+def two_phase_reddit_sampling(
+    reddit_df: pd.DataFrame,
+    negative_emotions_str: str,
+    n_samples_phase_1: int,
+    n_samples_final: int,
+    output_path: str,
+    random_seed: int
+) -> pd.DataFrame:
     # Phase 1 sampling
 
     # Create a normalized "negative emotion" score
     negative_emotions = [
-        emotion.strip() for emotion in CONFIG["negative_emotions"].split(",")
+        emotion.strip() for emotion in negative_emotions_str.split(",")
     ]
-    filtered_reddit_df["negative_emotion_weight"] = normalized_mean(
-        filtered_reddit_df, negative_emotions
+    reddit_df["negative_emotion_weight"] = normalized_mean(
+        reddit_df, negative_emotions
     )
     sampling_func = partial(
         stratified_weighted_sampling,
-        all_data=filtered_reddit_df,
-        total_samples=int(CONFIG["n_samples_phase1"]),
+        all_data=reddit_df,
+        total_samples=n_samples_phase_1,
         weight_col="negative_emotion_weight",
-        random_state=int(CONFIG["random_seed"]),
+        random_state=random_seed
     )
     # Stratified random sampling on subreddit, apply negative emotion weighting
     sampled_reddit_df_phase1 = (
-        filtered_reddit_df.groupby("subreddit")
+        reddit_df.groupby("subreddit")
         .apply(lambda x: sampling_func(group=x))
         .reset_index(drop=True)
     )
@@ -66,9 +70,20 @@ if __name__ == "__main__":
         1.0 / sampled_reddit_df_phase1["dominant_negative_emotion"].value_counts()
     )
     # Do weighted sampling to even out each dominant negative emotion
-    sampled_reddit_df_final = filtered_reddit_df.sample(
-        n=int(CONFIG["n_samples_final"]),
-        weights=sampled_reddit_df_phase1["dominant_negative_emotion"],
-        random_state=int(CONFIG["random_seed"]),
+    sampled_reddit_df_final = sampled_reddit_df_phase1.sample(
+        n=n_samples_final,
+        weights=inverse_freq_weight,
+        random_state=random_seed,
     )
-    sampled_reddit_df_final.to_csv(CONFIG["reddit_data_sampled_path"])
+    sampled_reddit_df_final.to_csv(output_path)
+
+if __name__ == "__main__":
+    filtered_reddit_df = pd.read_csv(CONFIG["reddit_data_filtered_path"])
+    two_phase_reddit_sampling(
+        reddit_df=filtered_reddit_df,
+        negative_emotions_str=CONFIG["negative_emotions"],
+        n_samples_phase_1=int(CONFIG["n_samples_phase1"]),
+        n_samples_final=int(CONFIG["n_samples_final"]),
+        output_path=CONFIG["reddit_data_sampled_path"],
+        random_seed=42
+    )
