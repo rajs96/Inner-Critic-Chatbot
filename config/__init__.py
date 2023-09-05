@@ -17,3 +17,4 @@ for section in CONFIG.sections():
 SCENARIO_GENERATION_CONFIG = CONFIG["scenario_generation"]
 SEED_INSTANCE_GENERATION_CONFIG = CONFIG["seed_instance_generation"]
 REDDIT_INSTANCE_GENERATION_CONFIG = CONFIG["reddit_instance_generation"]
+INSTRUCTION_FINETUNING_GENERATION_CONFIG = CONFIG["instruction_finetuning_generation"]

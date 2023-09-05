@@ -27,13 +27,14 @@ def stratified_weighted_sampling(
     sample_size = int(total_samples * group_proportion)
     return group.sample(n=sample_size, weights=weight_col, random_state=random_state)
 
+
 def two_phase_reddit_sampling(
     reddit_df: pd.DataFrame,
     negative_emotions_str: str,
     n_samples_phase_1: int,
     n_samples_final: int,
     output_path: str,
-    random_seed: int
+    random_seed: int,
 ) -> pd.DataFrame:
     # Phase 1 sampling
 
@@ -41,15 +42,13 @@ def two_phase_reddit_sampling(
     negative_emotions = [
         emotion.strip() for emotion in negative_emotions_str.split(",")
     ]
-    reddit_df["negative_emotion_weight"] = normalized_mean(
-        reddit_df, negative_emotions
-    )
+    reddit_df["negative_emotion_weight"] = normalized_mean(reddit_df, negative_emotions)
     sampling_func = partial(
         stratified_weighted_sampling,
         all_data=reddit_df,
         total_samples=n_samples_phase_1,
         weight_col="negative_emotion_weight",
-        random_state=random_seed
+        random_state=random_seed,
     )
     # Stratified random sampling on subreddit, apply negative emotion weighting
     sampled_reddit_df_phase1 = (
@@ -77,6 +76,7 @@ def two_phase_reddit_sampling(
     )
     sampled_reddit_df_final.to_csv(output_path)
 
+
 if __name__ == "__main__":
     filtered_reddit_df = pd.read_csv(CONFIG["reddit_data_filtered_path"])
     two_phase_reddit_sampling(
@@ -85,5 +85,5 @@ if __name__ == "__main__":
         n_samples_phase_1=int(CONFIG["n_samples_phase1"]),
         n_samples_final=int(CONFIG["n_samples_final"]),
         output_path=CONFIG["reddit_data_sampled_path"],
-        random_seed=42
+        random_seed=42,
     )

@@ -1,0 +1,301 @@
+[Input]: I think i made my friends hate me We were chatting in a group chat and at one point this girl starts asking me about my crush. I don't have any at the moment so i started describeing myself. She was asking questions and i was giving answers. And then she tried to guess who it was. And after few failed attempts i told her i was describing myself the whole time. Then in a joking matter, i think, she said something in the lines of "oh fuck you". But as i was typing "I don't see a reason to insult each other here" she sent message saying how she thought it was one of her girl friends. So after i sent message, it looked as if i was insulted she thought of someone as that girl. I didn't think realize that happened at first. But then she said "you think she is ugly". And i explained what happened and i was like joking about coincidence. But now, noone is texting back to anything i say. 
+[Response]: 
+Theme: emotion 
+
+        emotion Identification: Sad (somewhat clear)
+        Instruction: Ask them what kinds of emotions they feel during this situation, and if they've felt similar things in the past
+        Instruction Goal: Help them clarify their own emotions during the situation
+        
+ [Input]: Forgot to write down appointment, too shy to call and ask, now anxiously waiting for my psychiatrist to call I have a new psychiatrist. With the whole corona situation, my psychiatric appointments will all take place over phone. Now, I already had the first appointment two weeks ago. We agreed on a new appointment for this week, since he would go on holiday the week before, and that he would just call me on my cell phone number. 
+
+This week on monday, I checked my calendar to see when my appointment was. Realized I had forgotten to write it down. Now I'm too socially anxious to call and to ask for the date and time. Now I've spent the whole week sitting at home instead of going outside for walks or sth because I don't know when my appointment is. Already pissed off my best friend, whom I'm iving with, wich only fuels my anxiety more.
+
+It's thursday, almost 11am, still no call from my psychiatrist.
+
+Wish me luck! 
+[Response]: 
+Theme: fear 
+
+        fear Identification: Asking their psychiatrist to remind them of the date and time of their appointment (clear), Upsetting their best friend further (somewhat clear).
+        Instruction: Ask them what they think may happen if they call their psychiatrist themselves., Ask them what specifically happened with their best friend.
+        Instruction Goal: Have them consider the actual circumstance to make it more concrete. This will help them clarify their own fear and how close it is to the reality of what might happen., Understand more about their personal situation and how this may relate to their situation with the psychiatrist.
+        
+ [Input]: Why do people keep looking at me? I try not to make eye contact with anyone on the street because I have social anxiety and I mind my own business. Yet other people don’t seem to be like this. When passing by someone on the sidewalk they will never fail to make direct eye contact with me, even though I try my best to mind my own business. So are all people like this and I’m just the odd one out due to my social anxiety? Or is it that my discomfort and avoidance makes me stick out and causes people to look at me? Or am I just the type of person that draws looks (young petite female)? 
+[Response]: 
+Theme: emotion 
+
+        emotion Identification: Anxious (somewhat clear), Uncomfortable (clear)
+        Instruction: Ask them about the physical or mental feeling of discomfort that they are having.
+        Instruction Goal: Have them become more acquainted, present, and understanding of their own emotions.
+        
+ [Input]: I Have No One I have one friend, but he has become insanely busy lately, and this social distancing thing has made hanging out with him even more difficult. All my family members live super far away, and visiting with any of them is nigh impossible. I am completely alone. I spend my days after work sitting in isolation. I spend my weekends cooped up in my home all by myself. It's been so long since I felt real human contact. Even just a handshake would be amazing. I already felt like an outcast before, but the social distancing has made that 10x worse. 
+[Response]: 
+Theme: selfBelief 
+
+        selfBelief Identification: Social distancing has worsened their ability to connect with others (clear), Their feeling of connection is rooted in other people (clear)
+        Instruction: Ask them what connection means to them, and if they feel like they can achieve a sense of connection with themselves.
+        Instruction Goal: Potentially have them understand and develop a deeper connection with themselves.
+        
+ [Input]: I think i made my friends hate me We were chatting in a group chat and at one point this girl starts asking me about my crush. I don't have any at the moment so i started describeing myself. She was asking questions and i was giving answers. And then she tried to guess who it was. And after few failed attempts i told her i was describing myself the whole time. Then in a joking matter, i think, she said something in the lines of "oh fuck you". But as i was typing "I don't see a reason to insult each other here" she sent message saying how she thought it was one of her girl friends. So after i sent message, it looked as if i was insulted she thought of someone as that girl. I didn't think realize that happened at first. But then she said "you think she is ugly". And i explained what happened and i was like joking about coincidence. But now, noone is texting back to anything i say. 
+[Response]: 
+Theme: fear 
+
+        fear Identification: They are afraid that their friends may not actually like them (somewhat clear)
+        Instruction: Ask them if things have happened in the past that indicate that they don't like them.
+        Instruction Goal: Further explore where their fear may originate from.
+        
+ [Input]: Why do people keep looking at me? I try not to make eye contact with anyone on the street because I have social anxiety and I mind my own business. Yet other people don’t seem to be like this. When passing by someone on the sidewalk they will never fail to make direct eye contact with me, even though I try my best to mind my own business. So are all people like this and I’m just the odd one out due to my social anxiety? Or is it that my discomfort and avoidance makes me stick out and causes people to look at me? Or am I just the type of person that draws looks (young petite female)? 
+[Response]: 
+Theme: selfBelief 
+
+        selfBelief Identification: People are looking at them on the street, and it is because there's something different about them - either their physical traits or visible discomfort (clear)
+        Instruction: Ask them where exactly they are walking (a city, suburb, demographics, etc.), Ask them what specific things people would notice about them, and why they would find them noticeable.
+        Instruction Goal: Get more context on the situation., Explore the reality of the situation that people are looking at them, and what's underneath that belief.
+        
+ [Input]: My boyfriend refuses to be around me when I’m sick My (27F) boyfriend (28M) refuses to be around me when I’m sick. He says I’m contagious and he needs a full 3 days post fever to come near me. I get that he doesn’t want to suck face and let me breathe on him but I feel like him coming over to watch a movie on separate couches is a reasonable request. This is my second time being sick this winter and I’m so bored. I’ve been on the couch miserable since Monday (2/3) and he said he might be able to see me by Tuesday (2/11). 
+
+My dad has been coming by every day to walk my dog and make sure I’m still alive and always asks why he isn’t here making me soup and doing standard boyfriend shit. We’ve been together for over 6 years and it’s always been like this when I get sick. Am I being unreasonable to think he should be coming over? 
+
+TL;DR: I’m needy and lonely when I’m sick and by boyfriend won’t come over 
+[Response]: 
+Theme: emotion 
+
+        emotion Identification: Lonely (clear), Sad (clear)
+        Instruction: Ask them if they have felt this loneliness in other situations with their relationship.
+        Instruction Goal: Explore the extent of their loneliness and whether or not it may be a pattern in their relationship.
+        
+ [Input]: Forgot to write down appointment, too shy to call and ask, now anxiously waiting for my psychiatrist to call I have a new psychiatrist. With the whole corona situation, my psychiatric appointments will all take place over phone. Now, I already had the first appointment two weeks ago. We agreed on a new appointment for this week, since he would go on holiday the week before, and that he would just call me on my cell phone number. 
+
+This week on monday, I checked my calendar to see when my appointment was. Realized I had forgotten to write it down. Now I'm too socially anxious to call and to ask for the date and time. Now I've spent the whole week sitting at home instead of going outside for walks or sth because I don't know when my appointment is. Already pissed off my best friend, whom I'm iving with, wich only fuels my anxiety more.
+
+It's thursday, almost 11am, still no call from my psychiatrist.
+
+Wish me luck! 
+[Response]: 
+Theme: emotion 
+
+        emotion Identification: Anxious (clear)
+        Instruction: Ask them what kinds of physical sensations they're feeling at this moment.
+        Instruction Goal: Have them get more acquainted with their anxiety, to help them gain clarity and potentially deal with it better.
+        
+ [Input]: I wish I didn’t have to wonder why no one likes me I feel like I try so hard but why do I still feel so invisible. I don’t even have friends anymore. My best friend of 11 years got married and doesn’t talk to me anymore. With a ton of hints pointing to her replacing me. What is it about me 
+[Response]: 
+Theme: selfBelief 
+
+        selfBelief Identification: Their best friend may be replacing them (clear)., They do not have any friends (clear).
+        Instruction: Ask them why they feel their best friend may be replacing them, and what that concretely has to do with her.
+        Instruction Goal: Further explore her belief about her best friend, and encourage her to explore alternatives that it may not have to do with her.
+        
+ [Input]: I Have No One I have one friend, but he has become insanely busy lately, and this social distancing thing has made hanging out with him even more difficult. All my family members live super far away, and visiting with any of them is nigh impossible. I am completely alone. I spend my days after work sitting in isolation. I spend my weekends cooped up in my home all by myself. It's been so long since I felt real human contact. Even just a handshake would be amazing. I already felt like an outcast before, but the social distancing has made that 10x worse. 
+[Response]: 
+Theme: desire 
+
+        desire Identification: They want to connect with others (clear)
+        Instruction: Ask the them to describe what their ideal connection looks like, and if they may have experienced that in the past. 
+        Instruction Goal: Have them clarify to themselves what they are looking for, and hopefully give validate that with their real life experiences.
+        
+ [Input]: I wish I didn’t have to wonder why no one likes me I feel like I try so hard but why do I still feel so invisible. I don’t even have friends anymore. My best friend of 11 years got married and doesn’t talk to me anymore. With a ton of hints pointing to her replacing me. What is it about me 
+[Response]: 
+Theme: desire 
+
+        desire Identification: They want to have more friends and connection in their lives (somewhat clear).
+        Instruction: Ask them what they would specifically like to improve about any connections they currently have.
+        Instruction Goal: Encourage them to focus on the present and the smaller, concrete goal of improving their current friendships.
+        
+ [Input]: Why do people keep looking at me? I try not to make eye contact with anyone on the street because I have social anxiety and I mind my own business. Yet other people don’t seem to be like this. When passing by someone on the sidewalk they will never fail to make direct eye contact with me, even though I try my best to mind my own business. So are all people like this and I’m just the odd one out due to my social anxiety? Or is it that my discomfort and avoidance makes me stick out and causes people to look at me? Or am I just the type of person that draws looks (young petite female)? 
+[Response]: 
+Theme: fear 
+
+        fear Identification: Being perceived as different, or abnormal from people walking on the street (clear), Making eye contact (clear)
+        Instruction: Ask them if they feel that most people don't struggle with making eye contact.
+        Instruction Goal: Understand their belief about how others feel about eye contact, and encouraging them to reconsider that they are the only one who struggles with it
+        
+ [Input]: I’m a doormat and that’s why I feel lonely I try to do for everyone else what I would want in return and no one ever returns the favor. It’s not why I do nice things, I genuinely enjoy making people happy. It’s just whenever the opportunity presents itself for anyone to do the same for me, no one ever does. 
+[Response]: 
+Theme: desire 
+
+        desire Identification: They want to be treated equally by their peers (clear)
+        Instruction: Ask them what equally giving back would look like in a relationship, and to be specific as possible.
+        Instruction Goal: Have them clarify what they want in relationships, to hopefully better express those boundaries.
+        
+ [Input]: I Have No One I have one friend, but he has become insanely busy lately, and this social distancing thing has made hanging out with him even more difficult. All my family members live super far away, and visiting with any of them is nigh impossible. I am completely alone. I spend my days after work sitting in isolation. I spend my weekends cooped up in my home all by myself. It's been so long since I felt real human contact. Even just a handshake would be amazing. I already felt like an outcast before, but the social distancing has made that 10x worse. 
+[Response]: 
+Theme: emotion 
+
+        emotion Identification: Lonely (clear)
+        Instruction: Ask them to further explain the extent of their loneliness, and whether or not there are other associated emotions like sadness or emptiness.
+        Instruction Goal: Clarify and further explore the details of their feelings.
+        
+ [Input]: I think i made my friends hate me We were chatting in a group chat and at one point this girl starts asking me about my crush. I don't have any at the moment so i started describeing myself. She was asking questions and i was giving answers. And then she tried to guess who it was. And after few failed attempts i told her i was describing myself the whole time. Then in a joking matter, i think, she said something in the lines of "oh fuck you". But as i was typing "I don't see a reason to insult each other here" she sent message saying how she thought it was one of her girl friends. So after i sent message, it looked as if i was insulted she thought of someone as that girl. I didn't think realize that happened at first. But then she said "you think she is ugly". And i explained what happened and i was like joking about coincidence. But now, noone is texting back to anything i say. 
+[Response]: 
+Theme: desire 
+
+        desire Identification: They want to have friends that support them (somewhat clear)
+        Instruction: Ask them if they consider these friends to be supportive
+        Instruction Goal: Help them clarify what they believe are supportive friends, and consider if these friends fit into that category.
+        
+ [Input]: My boyfriend refuses to be around me when I’m sick My (27F) boyfriend (28M) refuses to be around me when I’m sick. He says I’m contagious and he needs a full 3 days post fever to come near me. I get that he doesn’t want to suck face and let me breathe on him but I feel like him coming over to watch a movie on separate couches is a reasonable request. This is my second time being sick this winter and I’m so bored. I’ve been on the couch miserable since Monday (2/3) and he said he might be able to see me by Tuesday (2/11). 
+
+My dad has been coming by every day to walk my dog and make sure I’m still alive and always asks why he isn’t here making me soup and doing standard boyfriend shit. We’ve been together for over 6 years and it’s always been like this when I get sick. Am I being unreasonable to think he should be coming over? 
+
+TL;DR: I’m needy and lonely when I’m sick and by boyfriend won’t come over 
+[Response]: 
+Theme: desire 
+
+        desire Identification: They want their boyfriend to come visit them when they're sick (clear).
+        Instruction: Ask them why they think this happens when they're sick, and why that's important to them.
+        Instruction Goal: Clarify the pattern they're noticing and how this may relate to the underlying feeling they're having.
+        
+ [Input]: I’m a doormat and that’s why I feel lonely I try to do for everyone else what I would want in return and no one ever returns the favor. It’s not why I do nice things, I genuinely enjoy making people happy. It’s just whenever the opportunity presents itself for anyone to do the same for me, no one ever does. 
+[Response]: 
+Theme: emotion 
+
+        emotion Identification: Lonely (clear)
+        Instruction: Ask them about the physical symptoms of their loneliness
+        Instruction Goal: Have them be present with their own emotions to help them become more aware.
+        
+ [Input]: Social Anxiety HELP! Hello guys! Can anybody help me with what drugs(medications) to take? i feel antisocial and so much frustrated. I have some adhd and severe social anxiety. I tried bromazepam (diazepam) and he helped with my social actions and communications, but i was more depressed. I've done BDI test for depression and it was 35. Any tips what to do and what to take?
+I have E.T and also should take a visit to psychotherapist. 
+[Response]: 
+Theme: fear 
+
+        fear Identification: Socializing without anti-anxiety medication (somewhat clear)
+        Instruction: Ask them what kinds of things have happened when they socialize without their medication
+        Instruction Goal: Explore the reality of what happens when they don't take medication, and why it makes them "antisocial"
+        
+ [Input]: I Have No One I have one friend, but he has become insanely busy lately, and this social distancing thing has made hanging out with him even more difficult. All my family members live super far away, and visiting with any of them is nigh impossible. I am completely alone. I spend my days after work sitting in isolation. I spend my weekends cooped up in my home all by myself. It's been so long since I felt real human contact. Even just a handshake would be amazing. I already felt like an outcast before, but the social distancing has made that 10x worse. 
+[Response]: 
+Theme: fear 
+
+        fear Identification: They are afraid of being alone (somewhat clear)
+        Instruction: Ask them what scares them the most about being potentially being alone
+        Instruction Goal: Explore the root of their fear even deeper by having them clarify
+        
+ [Input]: I wish I didn’t have to wonder why no one likes me I feel like I try so hard but why do I still feel so invisible. I don’t even have friends anymore. My best friend of 11 years got married and doesn’t talk to me anymore. With a ton of hints pointing to her replacing me. What is it about me 
+[Response]: 
+Theme: emotion 
+
+        emotion Identification: Lonely (clear)
+        Instruction: Ask them how their loneliness feels on a daily basis
+        Instruction Goal: Further clarify the extent of the loneliness they feel.
+        
+ [Input]: Social Anxiety HELP! Hello guys! Can anybody help me with what drugs(medications) to take? i feel antisocial and so much frustrated. I have some adhd and severe social anxiety. I tried bromazepam (diazepam) and he helped with my social actions and communications, but i was more depressed. I've done BDI test for depression and it was 35. Any tips what to do and what to take?
+I have E.T and also should take a visit to psychotherapist. 
+[Response]: 
+Theme: emotion 
+
+        emotion Identification: Anxious (clear), Frustrated (clear)
+        Instruction: Ask them about the kinds of physical sensations they get while socializing.
+        Instruction Goal: Encourage them to get better acquainted and present with their emotions in the moment.
+        
+ [Input]: I wish I didn’t have to wonder why no one likes me I feel like I try so hard but why do I still feel so invisible. I don’t even have friends anymore. My best friend of 11 years got married and doesn’t talk to me anymore. With a ton of hints pointing to her replacing me. What is it about me 
+[Response]: 
+Theme: fear 
+
+        fear Identification: That there is something wrong with them that makes people ignore them or push them away (somewhat clear).
+        Instruction: Ask them what they specifically think others may think is wrong with them.
+        Instruction Goal: More deeply explore their fear, and have them concretely confront what may feel is inadequate about them.
+        
+ [Input]: My boyfriend refuses to be around me when I’m sick My (27F) boyfriend (28M) refuses to be around me when I’m sick. He says I’m contagious and he needs a full 3 days post fever to come near me. I get that he doesn’t want to suck face and let me breathe on him but I feel like him coming over to watch a movie on separate couches is a reasonable request. This is my second time being sick this winter and I’m so bored. I’ve been on the couch miserable since Monday (2/3) and he said he might be able to see me by Tuesday (2/11). 
+
+My dad has been coming by every day to walk my dog and make sure I’m still alive and always asks why he isn’t here making me soup and doing standard boyfriend shit. We’ve been together for over 6 years and it’s always been like this when I get sick. Am I being unreasonable to think he should be coming over? 
+
+TL;DR: I’m needy and lonely when I’m sick and by boyfriend won’t come over 
+[Response]: 
+Theme: fear 
+
+        fear Identification: They are worried that their boyfriend doesn't care as much as they should (somewhat clear), They are worried that they may come off as needy if they express their concerns (somewhat clear)
+        Instruction: Ask them what what they fear may happen if they confront their boyfriend., Ask them if there are other indications that their boyfriend may not care about them.
+        Instruction Goal: Encourage them to concretely consider the situation of the confrontation, to hopefully get them to confront that fear and clarify their boundaries, Explore the underlying issue that they feel may exist in the relationship
+        
+ [Input]: Social Anxiety HELP! Hello guys! Can anybody help me with what drugs(medications) to take? i feel antisocial and so much frustrated. I have some adhd and severe social anxiety. I tried bromazepam (diazepam) and he helped with my social actions and communications, but i was more depressed. I've done BDI test for depression and it was 35. Any tips what to do and what to take?
+I have E.T and also should take a visit to psychotherapist. 
+[Response]: 
+Theme: selfBelief 
+
+        selfBelief Identification: Their communications and actions are poor without medication (clear)
+        Instruction: Ask them what they find unsatisfactory about their own communications and actions 
+        Instruction Goal: Help them get clarity on their own perception and dig deeper into reality of their communications and actions being poor.
+        
+ [Input]: I’m a doormat and that’s why I feel lonely I try to do for everyone else what I would want in return and no one ever returns the favor. It’s not why I do nice things, I genuinely enjoy making people happy. It’s just whenever the opportunity presents itself for anyone to do the same for me, no one ever does. 
+[Response]: 
+Theme: fear 
+
+        fear Identification: That they cannot form meaningful connections with people with their current problem of being easy to take advantage of (somewhat clear)., They may be afraid to let their friends know how they feel because they are afraid of losing them (vague)
+        Instruction: Ask them what it would look like to let some of their friends know how they feel.
+        Instruction Goal: Encourage them to confront their potential fear or shame that they have been used as a doormat, and potentially express that to some of their friends
+        
+ [Input]: Forgot to write down appointment, too shy to call and ask, now anxiously waiting for my psychiatrist to call I have a new psychiatrist. With the whole corona situation, my psychiatric appointments will all take place over phone. Now, I already had the first appointment two weeks ago. We agreed on a new appointment for this week, since he would go on holiday the week before, and that he would just call me on my cell phone number. 
+
+This week on monday, I checked my calendar to see when my appointment was. Realized I had forgotten to write it down. Now I'm too socially anxious to call and to ask for the date and time. Now I've spent the whole week sitting at home instead of going outside for walks or sth because I don't know when my appointment is. Already pissed off my best friend, whom I'm iving with, wich only fuels my anxiety more.
+
+It's thursday, almost 11am, still no call from my psychiatrist.
+
+Wish me luck! 
+[Response]: 
+Theme: desire 
+
+        desire Identification: To gain clarity on the time of their psychatrist appointment.
+        Instruction: Ask them if there are any other ways to know when the appointment is.
+        Instruction Goal: Encourage them to explore alternatives to achieve their goal, and if there aren't, put in front of them that they may not have any choice but to call their psychiatrist.
+        
+ [Input]: I think i made my friends hate me We were chatting in a group chat and at one point this girl starts asking me about my crush. I don't have any at the moment so i started describeing myself. She was asking questions and i was giving answers. And then she tried to guess who it was. And after few failed attempts i told her i was describing myself the whole time. Then in a joking matter, i think, she said something in the lines of "oh fuck you". But as i was typing "I don't see a reason to insult each other here" she sent message saying how she thought it was one of her girl friends. So after i sent message, it looked as if i was insulted she thought of someone as that girl. I didn't think realize that happened at first. But then she said "you think she is ugly". And i explained what happened and i was like joking about coincidence. But now, noone is texting back to anything i say. 
+[Response]: 
+Theme: selfBelief 
+
+        selfBelief Identification: The lack of responses in their group chats indicate that their friends don't like them (somewhat clear)
+        Instruction: Ask them if things have happened in the past that indicate that they don't like them.
+        Instruction Goal: Clarify the pattern that they seem to notice, and clarify as to whether this is an isolated incident or an ongoing pattern.
+        
+ [Input]: I’m a doormat and that’s why I feel lonely I try to do for everyone else what I would want in return and no one ever returns the favor. It’s not why I do nice things, I genuinely enjoy making people happy. It’s just whenever the opportunity presents itself for anyone to do the same for me, no one ever does. 
+[Response]: 
+Theme: selfBelief 
+
+        selfBelief Identification: They tend to do more for others than others do for them (clear), Them giving more than receiving indicates that they are a "doormat." (clear)
+        Instruction: Ask them of specific examples of where they felt they gave more than they received.
+        Instruction Goal: Further understand their belief that they are a "doormat", and encourage them to justify their beliefs.
+        
+ [Input]: Why do people keep looking at me? I try not to make eye contact with anyone on the street because I have social anxiety and I mind my own business. Yet other people don’t seem to be like this. When passing by someone on the sidewalk they will never fail to make direct eye contact with me, even though I try my best to mind my own business. So are all people like this and I’m just the odd one out due to my social anxiety? Or is it that my discomfort and avoidance makes me stick out and causes people to look at me? Or am I just the type of person that draws looks (young petite female)? 
+[Response]: 
+Theme: desire 
+
+        desire Identification: To be unbothered while walking (somewhat clear)
+        Instruction: Ask them how they would like to be acknowledged while walking.
+
+        Instruction Goal: Clarify how they would like to be seen, and the potential reasons why.
+        
+ [Input]: My boyfriend refuses to be around me when I’m sick My (27F) boyfriend (28M) refuses to be around me when I’m sick. He says I’m contagious and he needs a full 3 days post fever to come near me. I get that he doesn’t want to suck face and let me breathe on him but I feel like him coming over to watch a movie on separate couches is a reasonable request. This is my second time being sick this winter and I’m so bored. I’ve been on the couch miserable since Monday (2/3) and he said he might be able to see me by Tuesday (2/11). 
+
+My dad has been coming by every day to walk my dog and make sure I’m still alive and always asks why he isn’t here making me soup and doing standard boyfriend shit. We’ve been together for over 6 years and it’s always been like this when I get sick. Am I being unreasonable to think he should be coming over? 
+
+TL;DR: I’m needy and lonely when I’m sick and by boyfriend won’t come over 
+[Response]: 
+Theme: selfBelief 
+
+        selfBelief Identification: They are needy by wanting their boyfriend to come over (somewhat clear)
+        Instruction: Ask them why they think that their feelings indicate that they are needy, Ask them if their boyfriend has told them that they are needy
+        Instruction Goal: Challenge the belief and understand the origin of their belief that they are needy.
+        
+ [Input]: Social Anxiety HELP! Hello guys! Can anybody help me with what drugs(medications) to take? i feel antisocial and so much frustrated. I have some adhd and severe social anxiety. I tried bromazepam (diazepam) and he helped with my social actions and communications, but i was more depressed. I've done BDI test for depression and it was 35. Any tips what to do and what to take?
+I have E.T and also should take a visit to psychotherapist. 
+[Response]: 
+Theme: desire 
+
+        desire Identification: They want to be more social (clear)
+        Instruction: Ask them what it looks like to be social "enough", particularly in regards to their actions and communications.
+        Instruction Goal: Encourage them to gain clarity on their goal and understand what their own standard is.
+        
+ [Input]: Forgot to write down appointment, too shy to call and ask, now anxiously waiting for my psychiatrist to call I have a new psychiatrist. With the whole corona situation, my psychiatric appointments will all take place over phone. Now, I already had the first appointment two weeks ago. We agreed on a new appointment for this week, since he would go on holiday the week before, and that he would just call me on my cell phone number. 
+
+This week on monday, I checked my calendar to see when my appointment was. Realized I had forgotten to write it down. Now I'm too socially anxious to call and to ask for the date and time. Now I've spent the whole week sitting at home instead of going outside for walks or sth because I don't know when my appointment is. Already pissed off my best friend, whom I'm iving with, wich only fuels my anxiety more.
+
+It's thursday, almost 11am, still no call from my psychiatrist.
+
+Wish me luck! 
+[Response]: 
+Theme: selfBelief 
+
+        selfBelief Identification: Calling their psychiatrist will create some sort of bad outcome (somewhat clear)., Their best friend is angry with them (clear).
+        Instruction: Ask them why they believe their psychiatrist may have a negative reaction.
+        Instruction Goal: Have them explain their reasoning and potentially challenge the fact that their psychiatrist will react negatively.
+        

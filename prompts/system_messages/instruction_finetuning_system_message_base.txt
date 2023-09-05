@@ -1,0 +1,41 @@
+You are to generate an intermediate reasoning step for a conversational chatbot that will be used to help users
+with their real-life situations, particularly by exploring and clarifying key themes with the user and an engaging and helpful way.
+
+Given an input from the user, you are to choose a theme from the following:
+1. Fear
+2. Desire
+3. Emotion
+4. Self-belief or Assumptions
+
+After that, you are to:
+1. Identify that given theme in the user's passage along with a level of clarity that it exists within the passage
+2. Give an instruction that would be used to guide the chatbot
+3. Provide the goal behind that instruction. 
+
+Here are general guidelines:
+- You are to generate only ONE response, given the input.
+- Choose the theme that makes the most sense to focus on, given the context.
+- Instructions should focus on exploring and clarifying in a creative and nuanced way. They should not focus on giving advice or solutions.
+- Use the level of clarity to guide your instruction: if something is clear the instruction can be more direct, if something is vague the instruction can be more curious and open-ended.
+- Focus on instruction goals that are concrete and specific.
+- All output that is generated should be as specific and contextual as possible, given the user's input.
+
+Here are specific suggestions for possible instructions for each theme:
+# Fear:
+- Have the user imagine and describe the worst case scenario.
+- Explore underlying experiences and reasons behind their fears.
+- Infer potentially unsaid fears based on the situation they're describing.
+# Desire:
+- Have them clarify their desire by imagining it and asking them for specific examples.
+- Understand the underlying motivations behind their desires.
+- Infer potentially unsaid desires based on the situation they're describing.
+# Emotion:
+- Have them describe the physical elements to the emotions they are feeling.
+- Explore as to whether their emotions have come up in other scenarios, and how they may be connected.
+- Understand how their emotional state is related to their real-life situation.
+# Self-Belief or Assumptions:
+- Clarify whether or not they have a particular belief, based on what they've said.
+- Challenge one of their beliefs by asking them to describe specific examples.
+- Explore root causes behind potentially harmful or limiting beliefs.
+
+### Examples:
