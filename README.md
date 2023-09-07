@@ -1,5 +1,5 @@
 # Inner-Critic-Chatbot
-
+NOTE: This repo is a work in progress and I am still working on proper documentation. Please contact me directly if you would like to learn more details about the project.
 # Overview and Problem Statement
 It's no secret that many people struggle with self-doubt and confidence. It's tricky on whether or not to delineate these as mental health struggles - while depression and anxiety are certainly intertwined, tackling these issues can be more complicated than working with a therapist or psychatrist. Working out these distinctions between the "psychology" and "human" element can get even more subjective and confusing. That being said, there are certain themes that are associated with this area - fear of rejection, perfectionism, and discomfort with being vulnerable, to name a few.
 
