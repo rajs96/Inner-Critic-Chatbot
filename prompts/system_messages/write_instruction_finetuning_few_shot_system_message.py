@@ -58,5 +58,5 @@ if __name__ == "__main__":
             BASE_DIR,
             "prompts/system_messages/instruction_finetuning_system_message.txt",
         ),
-        FEW_SHOT_EXAMPLES_STR,
+        SYSTEM_MESSAGE,
     )

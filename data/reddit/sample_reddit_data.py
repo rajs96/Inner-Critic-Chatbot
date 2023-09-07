@@ -33,7 +33,6 @@ def two_phase_reddit_sampling(
     negative_emotions_str: str,
     n_samples_phase_1: int,
     n_samples_final: int,
-    output_path: str,
     random_seed: int,
 ) -> pd.DataFrame:
     # Phase 1 sampling
@@ -74,16 +73,16 @@ def two_phase_reddit_sampling(
         weights=inverse_freq_weight,
         random_state=random_seed,
     )
-    sampled_reddit_df_final.to_csv(output_path)
+    return sampled_reddit_df_final
 
 
 if __name__ == "__main__":
     filtered_reddit_df = pd.read_csv(CONFIG["reddit_data_filtered_path"])
-    two_phase_reddit_sampling(
+    sampled_reddit_df = two_phase_reddit_sampling(
         reddit_df=filtered_reddit_df,
         negative_emotions_str=CONFIG["negative_emotions"],
         n_samples_phase_1=int(CONFIG["n_samples_phase1"]),
         n_samples_final=int(CONFIG["n_samples_final"]),
-        output_path=CONFIG["reddit_data_sampled_path"],
         random_seed=42,
     )
+    sampled_reddit_df.to_csv(CONFIG["reddit_data_sampled_path"], index=False)
