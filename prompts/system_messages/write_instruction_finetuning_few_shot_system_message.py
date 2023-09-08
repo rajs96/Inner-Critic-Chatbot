@@ -35,6 +35,9 @@ if __name__ == "__main__":
     FEW_SHOT_EXAMPLES_PATH = join(
         BASE_DIR, "data/training_data/assets/few_shot_examples.csv"
     )
+    RANDOM_SEED = 42
+    random.seed(RANDOM_SEED)
+    # take 10 in-context examples
     FEW_SHOT_EXAMPLES_DF = pd.read_csv(FEW_SHOT_EXAMPLES_PATH, index_col=0)
     few_shot_examples = []
     for i, row in FEW_SHOT_EXAMPLES_DF.iterrows():
@@ -42,10 +45,9 @@ if __name__ == "__main__":
             example = extract_example(row, theme)
             few_shot_examples.append(example)
 
-    RANDOM_SEED = 42
-    random.seed(RANDOM_SEED)
+    # take random 10 examples
     random.shuffle(few_shot_examples)
-    FEW_SHOT_EXAMPLES_STR = " ".join(few_shot_examples)
+    FEW_SHOT_EXAMPLES_STR = " ".join(few_shot_examples[:10])
     SYSTEM_MESSAGE_BASE = read_text_file(
         join(
             BASE_DIR,

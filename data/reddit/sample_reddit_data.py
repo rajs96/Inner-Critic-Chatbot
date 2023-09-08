@@ -66,11 +66,14 @@ def two_phase_reddit_sampling(
     )
     inverse_freq_weight = (
         1.0 / sampled_reddit_df_phase1["dominant_negative_emotion"].value_counts()
-    )
+    ).to_dict()
+    sampled_reddit_df_phase1[
+        "dominant_negative_emotion_weight"
+    ] = sampled_reddit_df_phase1["dominant_negative_emotion"].map(inverse_freq_weight)
     # Do weighted sampling to even out each dominant negative emotion
     sampled_reddit_df_final = sampled_reddit_df_phase1.sample(
         n=n_samples_final,
-        weights=inverse_freq_weight,
+        weights="dominant_negative_emotion_weight",
         random_state=random_seed,
     )
     return sampled_reddit_df_final
@@ -81,7 +84,7 @@ if __name__ == "__main__":
     sampled_reddit_df = two_phase_reddit_sampling(
         reddit_df=filtered_reddit_df,
         negative_emotions_str=CONFIG["negative_emotions"],
-        n_samples_phase_1=int(CONFIG["n_samples_phase1"]),
+        n_samples_phase_1=int(CONFIG["n_samples_phase_1"]),
         n_samples_final=int(CONFIG["n_samples_final"]),
         random_seed=42,
     )
