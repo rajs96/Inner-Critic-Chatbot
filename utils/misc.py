@@ -16,6 +16,13 @@ def write_text_file(file_path: str, text: str) -> str:
         file.write(text)
 
 
+def append_to_file(filename, text):
+    """Helper to iteratively append text to a file"""
+    with open(filename, "a") as f:
+        f.write(text)
+        f.flush()
+
+
 def read_text_file_lines(file_path: str) -> List[str]:
     "Helper to read a text file line by line into a list"
     res = []

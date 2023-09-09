@@ -17,6 +17,9 @@ filter-reddit-data:
 sample-reddit-data:
 	python data/reddit/sample_reddit_data.py
 
+generate-instructions:
+	python data/training_data/generate_instruction_finetuning_data.py
+
 format:
 	black .
 
