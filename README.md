@@ -26,7 +26,10 @@ export OPENAI_API_KEY="your key here"
 
 # Documentation Sections
 
-Here are explanations / documentation for main steps of the projects:
-- [Data](data/README.md) How initial training dataset was curated and generated.
-- Models [TODO]: Two-step modeling approach to the chat agent.
-- Evaluation [TODO]: Evaluation of Chat Agent.
+Here are explanations / documentation for main steps of the projects. Some steps are still in progress.
+- [Data](data/README.md): How initial training dataset was curated and generated.
+- Models [In Progress]: Two-step modeling approach to the chat agent.
+- Evaluation [In Progress]: Evaluation of Chat Agent.
+
+# Demo
+In Progress
