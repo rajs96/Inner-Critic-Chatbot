@@ -29,7 +29,7 @@ For the later finetuning steps, you'll need more advanced environment setup, suc
 # Documentation Sections
 
 Here are explanations / documentation for main steps of the projects. Some steps are still in progress.
-- [Data and Prompt Engineering - DONE] (data/README.md): How initial training dataset was curated and generated.
+- [Data and Prompt Engineering - DONE](data/README.md): How initial training dataset was curated and generated.
 - Models [In Progress]: Two-step modeling approach to the chat agent.
 - Evaluation [In Progress]: Evaluation of Chat Agent.
 
