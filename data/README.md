@@ -29,7 +29,7 @@ In order to get the best of both worlds, I took a hybrid approach.
 
 This synthetic data generation approach has two parts: scenario generation and what I call "seed instance" generation.
 
-The *scenario generation* step involves using an LLM to generate a variety of hypothetical scenarios that simulate real-life scenarios that someone may describe when talking about self-doubt issues. The LLM is provided a [system prompt](./prompts/system_messages/scenario_generation_system_message.txt) and an [input prompt template](./prompts/input_messages/scenario_generation_input_message.txt). The input prompt takes in a scenario type and generates 10 scenarios based on that scenario type. 
+The *scenario generation* step involves using an LLM to generate a variety of hypothetical scenarios that simulate real-life scenarios that someone may describe when talking about self-doubt issues. The LLM is provided a [system prompt](../prompts/system_messages/scenario_generation_system_message.txt) and an [input prompt template](../prompts/input_messages/scenario_generation_input_message.txt). The input prompt takes in a scenario type and generates 10 scenarios based on that scenario type. 
 
 For example, for the scenario type "Giving Presentations", the LLM generated some scenarios:
 - A college student is terrified of giving a presentation in front of her class due to public speaking anxiety.
