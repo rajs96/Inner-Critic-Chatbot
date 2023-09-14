@@ -24,10 +24,12 @@ You also need an OpenAI API key to run some of the data generation scripts:
 export OPENAI_API_KEY="your key here"
 ```
 
+For the later finetuning steps, you'll need more advanced environment setup, such as your AWS account, HuggingFace models, etc. I'll provide more details on that later.
+
 # Documentation Sections
 
 Here are explanations / documentation for main steps of the projects. Some steps are still in progress.
-- [Data](data/README.md): How initial training dataset was curated and generated.
+- [Data and Prompt Engineering - DONE] (data/README.md): How initial training dataset was curated and generated.
 - Models [In Progress]: Two-step modeling approach to the chat agent.
 - Evaluation [In Progress]: Evaluation of Chat Agent.
 
